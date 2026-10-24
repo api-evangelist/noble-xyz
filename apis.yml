@@ -1,26 +1,75 @@
 aid: noble-xyz
+
 name: Noble
+
+image: https://framerusercontent.com/images/3pMcA54QM84UXNz7rhqC4IPZ0.jpg
+
 description: 'Noble is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by paradigm, polychain) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/noble-xyz/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
-- Company
-apis: []
+- Stablecoin
+- Infrastructure
+- Payments
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: Vendors
+  url: vendors/noble-xyz-vendors.yml
+- type: LLMsTxt
+  url: llms/noble-xyz-llms.txt
+- type: Hosts
+  url: hosts/noble-xyz-hosts.yml
+- type: TermsOfService
+  url: https://noble.xyz/terms-of-use
+- type: PrivacyPolicy
+  url: https://noble.xyz/privacy-policy
+- type: Blog
+  url: https://noble.xyz/blog/orbiter
+- type: Documentation
+  url: https://docs.noble.xyz/
+- type: DomainSecurity
+  url: security/noble-xyz-domain-security.yml
+- type: Website
+  url: https://www.noble.xyz
+
+apis: []
+
 x-backed-by:
 - paradigm
 - polychain
-common:
-- type: Website
-  url: https://www.noble.xyz
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The documentation site is a JavaScript‑rendered Framer site with no machine‑readable spec discovered.
+  evidence:
+    - url: https://noble.xyz/
+      status: 200
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
